@@ -2,7 +2,7 @@ import Header from './components/header';
 import './App.css';
 import Footer from './components/footer';
 import OfficeInfo from './components/office-info';
-import Equipment from './equipment';
+import Equipment from './components/equipment';
 
 function App() {
   return (
