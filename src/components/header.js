@@ -1,5 +1,5 @@
 import React from "react";
-import GorillaRack from "./images/gorillarack.png";
+import GorillaRack from "../images/gorillarack.png";
 
 
 function Header() {
@@ -7,7 +7,8 @@ function Header() {
 
     <div className="Header">
       <header className="App-header">
-        <h1>Central Coast Barbell</h1>
+        <hr className="line"></hr>
+        <h1 className="main-header">Central Coast Barbell</h1>
         <div>
           <h5 className="sub-header">Oldschool BodyBuilding & Powerlifting training facility</h5>
         </div>
