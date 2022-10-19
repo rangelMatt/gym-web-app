@@ -1,17 +1,34 @@
-import React from "react";
-import Button from 'react-bootstrap/Button';
+import React, { useCallback } from "react";
+// import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Equipment() {
+import { HiOutlineSpeakerphone } from "react-icons/hi";
+// import { BiRightArrowAlt } from "react-icons/bi";
+// import styles from "./Button.module.css";
+import Button from "./Button"
+import styles from "./signup.module.css";
 
-  const shoot = () => {
-    alert("Get Swole!");
-  }
+
+const Equipment = () => {
+
+  const shoot = useCallback((message) => {
+    alert(message);
+  }, []);
+
+
 
   return (
 
     <div className="Office-Info">
-      <Button onClick={shoot}>Click for a Day Pass!</Button>
+      <div className={styles.container}>
+        <div className={styles.section}>
+          <Button
+          icon={<HiOutlineSpeakerphone/>}
+          title="Sign Up Here"
+          onClick={() => shoot('Know how to Swole')}
+          />
+        </div>
+      </div>
       <hr className="line"></hr>
       <h1>Central Coast Barbell Equipment</h1>
       <hr className="line"></hr>
@@ -42,7 +59,7 @@ function Equipment() {
 
       </div>
       <hr className="line"></hr>
-      
+
     </div>
   );
 }
