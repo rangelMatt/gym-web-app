@@ -10,7 +10,7 @@ function Header() {
         <hr className="line"></hr>
         <h1 className="main-header">Central Coast Barbell</h1>
         <div>
-          <h5 className="sub-header">Oldschool BodyBuilding & Powerlifting training facility</h5>
+          <h5 className="sub-header">24HR Oldschool BodyBuilding & Powerlifting training facility</h5>
         </div>
       </header>
       <hr className="line"></hr>
