@@ -7,7 +7,8 @@ import { HiOutlineSpeakerphone } from "react-icons/hi";
 // import styles from "./Button.module.css";
 import SignUp from "./SignUp"
 import styles from "./signup.module.css";
-
+// import './App.css';
+import Grid from './eqpmnt-modal'
 
 const Equipment = () => {
 
@@ -15,7 +16,7 @@ const Equipment = () => {
     alert(message);
   }, []);
 
-
+  const arrOfObj = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
   return (
 
@@ -44,6 +45,9 @@ const Equipment = () => {
       <div className="office-content">
         <dl>
           <dt><u>Bodybuilding Equipment</u></dt>
+          <div className="Equipment">
+          <Grid arrOfObj={arrOfObj}/>
+    </div>
           <dd>- Hack Squat</dd>
           <dd>- Hack Squat</dd>
           <dd>- Hack Squat</dd>
