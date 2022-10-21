@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import Iframe from 'react-iframe';
 
 import { HiOutlineSpeakerphone } from "react-icons/hi";
-import Button from "./Button"
+import SignUp from "./SignUp"
 import styles from "./signup.module.css";
 
 
@@ -22,7 +22,7 @@ function OfficeInfo() {
           <h4><u>Saturday & Sunday:</u> By Appointment Only</h4>
           <div className={styles.container}>
         <div className={styles.section}>
-          <Button
+          <SignUp
           icon={<HiOutlineSpeakerphone/>}
           title="Sign Up Here"
           onClick={() => shoot('Know how to Swole')}
