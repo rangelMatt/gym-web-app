@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { HiOutlineSpeakerphone } from "react-icons/hi";
 // import { BiRightArrowAlt } from "react-icons/bi";
 // import styles from "./Button.module.css";
-import Button from "./Button"
+import SignUp from "./SignUp"
 import styles from "./signup.module.css";
 
 
@@ -22,7 +22,7 @@ const Equipment = () => {
     <div className="Office-Info">
       <div className={styles.container}>
         <div className={styles.section}>
-          <Button
+          <SignUp
             icon={<HiOutlineSpeakerphone />}
             title="Sign Up Here"
             onClick={() => shoot('Know how to Swole')}
