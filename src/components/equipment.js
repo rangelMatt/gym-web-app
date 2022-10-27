@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 // import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { HiOutlineSpeakerphone } from "react-icons/hi";
+import { HiOutlineSpeakerphone, HiOutlineKey } from "react-icons/hi";
 // import { BiRightArrowAlt } from "react-icons/bi";
 // import styles from "./Button.module.css";
 import SignUp from "./SignUp"
@@ -23,10 +23,15 @@ import tricepDip from "../images/seated-tricep-dip.jpg"
 import hackSquat from "../images/hack-squat.jpg"
 import donkeyCalfraise from "../images/donkey-calfraise.jpg"
 import hsLegCurl from "../images/hs-seated-leg-curl.jpg"
+import DayPass from "./DayPass";
 
 const Equipment = () => {
 
   const shoot = useCallback((message) => {
+    alert(message);
+  }, []);
+
+  const pass = useCallback((message) => {
     alert(message);
   }, []);
 
@@ -42,6 +47,14 @@ const Equipment = () => {
             title="Sign Up Here"
             onClick={() => shoot('Know how to Swole')}
           />
+          <DayPass
+              icon={<HiOutlineKey />}
+              title="Day Pass"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "https://form.jotform.com/ccbarbell1081/waiver";
+              }}
+            />
         </div>
       </div>
       <hr className="line"></hr>
@@ -63,7 +76,7 @@ const Equipment = () => {
           <Container fluid="sm">
             <Row>
               <Col
-                sm={4}
+                sm={6}
                 flex
               >- Icarian Standing Deltoid Raise</Col>
             </Row>
@@ -126,7 +139,7 @@ const Equipment = () => {
 
             <Row>
               <Col
-                sm={3}
+                sm={6}
                 flex
               >- CYBEX Advanced Chest</Col>
             </Row>
@@ -159,7 +172,7 @@ const Equipment = () => {
 
             <Row>
               <Col
-                sm={3}
+                sm={6}
                 flex
               >- Nautilus First-Generation Super Pullover</Col>
             </Row>
@@ -194,7 +207,7 @@ const Equipment = () => {
 
             <Row>
               <Col
-                sm={3}
+                sm={6}
                 flex
               >- FLEX Fitness Seated Tricep Dip</Col>
             </Row>
