@@ -25,18 +25,45 @@ import donkeyCalfraise from "../images/donkey-calfraise.jpg"
 import hsLegCurl from "../images/hs-seated-leg-curl.jpg"
 import DayPass from "./DayPass";
 
+import  EquipmentModal  from "./eqpmnt-modal"
+
+// import '@react-ui-org/react-ui/src/lib/theme.scss';
+// import '@react-ui-org/react-ui/src/lib/foundation.scss';
+// import {
+//   Modal,
+//   ModalHeader,
+//   ModalBody,
+//   ModalCloseButton,
+//   ModalContent,
+//   ModalFooter,
+//   ModalTitle,
+//   Toolbar,
+//   ToolbarItem,
+//   Button,
+// } from '@react-ui-org/react-ui';
+
+
 const Equipment = () => {
 
   const shoot = useCallback((message) => {
     alert(message);
   }, []);
 
-  const pass = useCallback((message) => {
-    alert(message);
-  }, []);
+  const EquipmentModal = <EquipmentModal/>
+  // const pass = useCallback((message) => {
+  //   alert(message);
+  // }, []);
 
-  // const lowerBody = ["Icarian Hack Squat 35°"]
+  // const [modalOpen, setModalOpen] = React.useState(false)
+  // const [variant, setVariant] = React.useState(null)
+  // const modalPrimaryButtonRef = React.useRef()
+  // const modalCloseButtonRef = React.useRef()
 
+  // const [showModal, setShowModal] = useState(false);
+
+  // const openModal = () => {
+  //   setShowModal(true);
+  // };
   return (
 
     <div className="Office-Info">
@@ -48,13 +75,13 @@ const Equipment = () => {
             onClick={() => shoot('Know how to Swole')}
           />
           <DayPass
-              icon={<HiOutlineKey />}
-              title="Day Pass"
-              onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "https://form.jotform.com/ccbarbell1081/waiver";
-              }}
-            />
+            icon={<HiOutlineKey />}
+            title="Day Pass"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = "https://form.jotform.com/ccbarbell1081/waiver";
+            }}
+          />
         </div>
       </div>
       <hr className="line"></hr>
@@ -77,8 +104,17 @@ const Equipment = () => {
             <Row>
               <Col
                 sm={6}
-                flex
-              >- Icarian Standing Deltoid Raise</Col>
+                flex="true"
+                
+              ><a href={EquipmentModal}>- Icarian Standing Deltoid Raise
+                </a></Col>
+              {/* <div className="App">
+                <h1>Popup Modal</h1>
+                <button onClick={openModal}>Open Modal</button>
+                {showModal ? <EquipmentModal setShowModal={setShowModal} /> : null}
+              </div> */}
+
+
             </Row>
             <Row>
               <Col sm={3}
@@ -107,7 +143,7 @@ const Equipment = () => {
             <Row>
               <Col
                 sm={6}
-                flex
+                flex="true"
               >- FLEX Fitness LEVERAGE Chest Press</Col>
             </Row>
             <Row>
@@ -140,7 +176,7 @@ const Equipment = () => {
             <Row>
               <Col
                 sm={6}
-                flex
+                flex="true"
               >- CYBEX Advanced Chest</Col>
             </Row>
             <Row>
@@ -173,7 +209,7 @@ const Equipment = () => {
             <Row>
               <Col
                 sm={6}
-                flex
+                flex="true"
               >- Nautilus First-Generation Super Pullover</Col>
             </Row>
             <Row>
@@ -208,7 +244,7 @@ const Equipment = () => {
             <Row>
               <Col
                 sm={6}
-                flex
+                flex="true"
               >- FLEX Fitness Seated Tricep Dip</Col>
             </Row>
             <Row>
@@ -239,7 +275,7 @@ const Equipment = () => {
               <Row>
                 <Col
                   sm={3}
-                  flex
+                  flex="true"
                 >- Icarian Hack Squat (35° angle)</Col>
               </Row>
               <Row>
@@ -271,7 +307,7 @@ const Equipment = () => {
               <Row>
                 <Col
                   sm={4}
-                  flex
+                  flex="true"
                 >- Icarian Donkey Calf Raise</Col>
               </Row>
               <Row>
@@ -298,7 +334,7 @@ const Equipment = () => {
               <Row>
                 <Col
                   sm={5}
-                  flex
+                  flex="true"
                 >- Hammer Strength Seated Leg Curl (Plate Loaded)</Col>
               </Row>
               <Row>
